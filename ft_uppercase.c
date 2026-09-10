@@ -5,7 +5,8 @@ char *ft_uppercase(char *str)
 
 	while (*ptr)
 	{
-		*ptr += 'a' -'A';
+		if (*ptr >= 'a' && *ptr <= 'z')
+			*ptr -= 'a' -'A';
 		ptr++;
 	}
 	return(str);
